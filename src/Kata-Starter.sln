@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata", "Kata\Kata.csproj", "{E23B873B-193D-44F7-BA0D-8C54AB3AED39}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceTracker", "PriceTracker\PriceTracker.csproj", "{E23B873B-193D-44F7-BA0D-8C54AB3AED39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.Spec", "Kata.Spec\Kata.Spec.csproj", "{3726D02E-54DA-49C7-9E2D-9D774D8870E8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceTracker.Spec", "PriceTracker.Spec\PriceTracker.Spec.csproj", "{3726D02E-54DA-49C7-9E2D-9D774D8870E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
