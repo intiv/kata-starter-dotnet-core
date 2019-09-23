@@ -31,7 +31,7 @@ namespace PriceTracker.Spec
             _peppers.Add(_systemUnderTest);
         };
 
-        Because ofFirst = () =>
+        Because of = () =>
         {
             _carrots.PricePerPound = 0.73;
             _peppers.PricePerPound = 0.95;
