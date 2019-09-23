@@ -14,7 +14,7 @@ namespace Kata
             if (s.StartsWith("//"))
             {
                 var split = s.Split("\n");
-                separator = new[] {split.First().Replace("//", "")};
+                separator = new[] {split.First().Replace("//", "").Replace("[","").Replace("]","")};
                 s = split.Last();
             }
             var strings = s.Split(separator, StringSplitOptions.None).Select(int.Parse).Where(x => x < 1001);
