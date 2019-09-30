@@ -19,7 +19,7 @@ namespace Kata
             var strings = s.Split(separator, StringSplitOptions.None).Select(int.Parse);
             var negatives = strings.Where(x => x<0);
             if(negatives.Any())
-                throw new Exception("negatives not allowed: -2");
+                throw new Exception($@"negatives not allowed: {String.Join(", ", negatives)}");
             return strings.Sum();
         }
     }
