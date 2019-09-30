@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Kata
@@ -9,18 +10,30 @@ namespace Kata
         {
             if(string.IsNullOrEmpty(s))
                 return 0;
-            var separator = new []{",", "\n"};
+            var strings = GetNumbers(s);
+            VerifyNegatives(strings);
+            return strings.Sum();
+        }
+
+        static void VerifyNegatives(IEnumerable<int> strings)
+        {
+            var negatives = strings.Where(x => x < 0);
+            if (negatives.Any())
+                throw new Exception($@"negatives not allowed: {String.Join(", ", negatives)}");
+        }
+
+        static IEnumerable<int> GetNumbers(string s)
+        {
+            var separator = new[] {",", "\n"};
             if (s.StartsWith("//"))
             {
                 var split = s.Split("\n");
-                separator = split.First().Replace("//", "").Replace("[","").Split("]");
+                separator = split.First().Replace("//", "").Replace("[", "").Split("]");
                 s = split.Last();
             }
+
             var strings = s.Split(separator, StringSplitOptions.None).Select(int.Parse).Where(x => x < 1001);
-            var negatives = strings.Where(x => x<0);
-            if(negatives.Any())
-                throw new Exception($@"negatives not allowed: {String.Join(", ", negatives)}");
-            return strings.Sum();
+            return strings;
         }
     }
 }
