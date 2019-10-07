@@ -2,9 +2,9 @@
 {
     public class Calculator
     {
-        public int Add()
+        public int Add(string s="")
         {
-            return -1;
+            return 0;
         }
     }
 }
