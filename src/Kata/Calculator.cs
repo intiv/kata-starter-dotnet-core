@@ -17,7 +17,7 @@ namespace Kata
                 s = split.Last();
             }
 
-            var strings = s.Split(separator, StringSplitOptions.None).Select(int.Parse);
+            var strings = s.Split(separator, StringSplitOptions.None).Select(int.Parse).Where(x => x < 1001);
             var negatives = strings.Where(x => x < 0);
             if(negatives.Any())
                 throw new Exception($@"negatives not allowed: {string.Join(", ",negatives)}");
